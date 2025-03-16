@@ -1,0 +1,336 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 1px 0;
+}
+
+
+#pitso{
+    color: white;
+    font-size: 1.8rem;
+    margin-left: 5%;
+    max-width: fit-content;
+}
+#pitso::first-letter{
+    color: red;
+}
+
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    width: -40%;
+    margin-right: 10%;
+    column-gap: 2em;
+    font-size: 1.1rem;
+    transition: text-decoratin;
+    gap: em;
+    margin-left: 50%;
+}
+
+@keyframes changeColor{
+    5%{background-color: red}
+    100%{background-color: red}   
+}
+
+#navbar a:hover{
+    animation: changeColor 12s linear;
+}
+
+header {
+    background-color: black;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#frontP{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-right: 10%;
+}
+
+softWare{
+   
+    margin-left: 10px;
+
+}
+
+#myName{
+    display: block;
+    flex-direction: column;
+    row-gap: 0.1rem;
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 15%;
+    margin-right: 45%;
+    line-height: 0.4;
+}
+
+#image{
+    position: fixed;
+    top: 50px;  
+    z-index: -1; /* Lower z-index so content can cover it */
+    object-fit: cover;
+}
+.about{
+    border: none;
+    background-color: black;
+    display: flex;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 30px;
+
+}
+.aboutMe{
+    padding-left: 3%;
+    left: 20px;
+    color: white;
+}
+
+#img2{
+    width: 400px;
+    background-color: rgb(31, 26, 26);
+    height: 500px;
+    border-radius: 30px;
+}
+.skills a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 253, 253);
+    font-weight: bold;
+    align-content: space-between;
+    text-shadow: 2px 2px 2px red;
+}
+
+.skills a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: red;
+    transition: width 0.4s ease-in-out;
+}
+  
+.skills a:hover::after {
+    width: 100%;
+}
+
+.subSkills{
+    font-family: "Arial Narrow";
+    font-size: 1.5em;
+    column-gap: 2em;
+}
+
+#skill, #exp, #edu{
+    margin-right: 8%;
+}
+.disp{
+    display: none;
+}
+.noDisp{
+    display: none;
+}
+.techSkills{
+    padding-block: 10%;
+}
+
+.program {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: rgb(0, 0, 0);
+    margin-right: 8%;
+    margin-left: 8%;
+    height: 200px;
+}
+
+.pro {
+    background-color: #473e3e;
+    color: white;
+    padding: 1em;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(255, 0, 0, 0.226);
+    transition: transform 0.4s ease;
+}
+
+#section {
+    padding: 2em;
+    display: flow-root;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.project {
+    background-color: #f7f7f7;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 250px;
+    width: 250px;
+    content-visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.project:hover{
+    box-shadow: 0px -10px 20px rgba(245, 1, 1, 0.637);
+    content-visibility: visible;
+    transform: translateY(-10px);
+}
+.project h2{
+    background-color: white;
+    width: fit-content;
+}
+
+#pro1{
+    background-image: url(wea2.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+#pro2{
+    background-image: url(dice2.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+#pro3{
+    background-image: url(clock1.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.viewProjects{
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.952);
+    color: black;
+    font-size: 80%;
+    font-weight: bold;
+}
+.viewProjects:hover{
+    background-color: black;
+    color: white;
+}
+#more button{
+    font-style: italic;
+    padding: 10px, 10px;
+    max-width: fit-content;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-size: 0.9em;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+#more button:hover{
+    transform: scale(120%, 120%);
+    cursor: pointer;
+    background-color: rgb(92, 5, 5);
+}
+
+.contact{
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+    font-size: 150%;
+    padding: auto;
+    padding-bottom: 5%;
+    padding-block: 15%;
+}
+.symbol, p{
+    font-size: 70%;
+}
+.inputT{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+}
+#name, #email{
+    height: 2rem;
+    width: 140%;
+    font-size: 1.1rem;
+}
+#msg{
+    width: 140%;
+    height: 6em;
+    font-size: 1.1em;
+    vertical-align: text-top;
+}
+#submit{
+    border: none;
+    width: 50%;
+    border-radius: 5%;
+    background-color: red;
+    color: white;
+    padding: 10px;
+}
+#submit:hover{
+    background-color: hsl(0, 100%, 30%);
+    cursor: pointer;
+}
+.icons{
+    display: flex;
+    column-gap: 1.5em;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.fa-brands{
+    color: white;
+    transition: transform 0.4s ease;
+}
+.fa-brands:hover{
+    color: red;
+    padding: 0%;
+    transform: translateY(-7px);
+}
+#cvBtn{
+    text-decoration: none;
+    font-size: 50%;
+    color: white;
+    padding: 10px 25px;
+    background-color: red;
+    border-radius: 5%;
+    border: none;
+}
+#cvBtn:hover{
+    background-color: hsl(0, 100%, 30%);
+    cursor: pointer;
+}
+.footer{
+    display: flex;
+    font-size: 1.2em;
+    justify-content: center;
+    border: 1px solid;
+    height: 5%;
+    background-color: gray;
+}
+
+
+
