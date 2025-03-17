@@ -24,7 +24,7 @@ buttons.forEach((button, index) => {
 });
 
 const downloadLink = document.getElementById('cvBtn');
-const cvFile = "CV/Pitso's_CV.pdf";
+const cvFile = "CV/PitsoCV.pdf";
 downloadLink.href = cvFile;
 downloadLink.download = "PitsoCV.pdf";
 
